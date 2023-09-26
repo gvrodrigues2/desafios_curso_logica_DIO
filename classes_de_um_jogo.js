@@ -9,22 +9,30 @@ class Hero {
         let ataque = "";
         switch (this.tipo) {
             case "mago":
-                ataque = "usou magia";
+                ataque = " magia";
                 break;
             case "guerreiro":
-                ataque = "usou espada";
+                ataque = " espada";
                 break;
             case "monge":
-                ataque = "usou artes marciais";
+                ataque = " artes marciais";
                 break;
             case "ninja":
-                ataque = "usou shuriken";
+                ataque = " shuriken";
                 break;
             default:
-                ataque = "usou um ataque desconhecido";
+                ataque = " um ataque desconhecido";
         }
         
         const mensagem = `o ${this.tipo} atacou usando ${ataque}`;
         return mensagem;
     }
 }
+
+// Exemplo de uso da classe Hero
+const heroi1 = new Hero("Aragorn", 35, "guerreiro");
+const heroi2 = new Hero("Gandalf", 60, "mago");
+
+console.log(heroi1.atacar()); 
+console.log(heroi2.atacar());
+
